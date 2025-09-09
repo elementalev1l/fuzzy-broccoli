@@ -21,3 +21,4 @@ if [ ! -f /opt/lab/config/db.php ]; then
     su model -c "php /opt/lab/craft setup/db --interactive 0 --driver pgsql --server $DB_HOST --user $DB_USER --password $DB_PASS --database $DB_NAME"
     su model -c "php /opt/lab/craft install/craft --interactive 0 --email admin@localhost.fr --language en_US --password password --site-name cve --site-url http://localhost:$PORT --username admin"
 fi
+tail -f /dev/null
